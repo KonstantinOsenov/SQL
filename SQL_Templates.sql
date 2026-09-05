@@ -131,3 +131,17 @@ where 1=1
   and o.type      = 'V'
   and name like '%qwe%'
 
+-- Examples/Templates
+
+case when avg_disc_perc >= 0 and avg_disc_perc < 10 then '0-9'
+	 when avg_disc_perc >= 10 and avg_disc_perc < 20 then '10-19'
+	 when avg_disc_perc >= 20 and avg_disc_perc < 30 then '20-29'
+	 when avg_disc_perc >= 30 and avg_disc_perc < 40 then '30-39'
+	 when avg_disc_perc >= 40 and avg_disc_perc < 50 then '40-49'
+	 when avg_disc_perc >= 50 and avg_disc_perc < 60 then '50-59'
+	 when avg_disc_perc >= 60 and avg_disc_perc < 70 then '60-69'
+	 when avg_disc_perc >= 70 and avg_disc_perc < 80 then '70-79'
+	 when avg_disc_perc >= 80 and avg_disc_perc < 90 then '80-89'
+	 when avg_disc_perc >= 90 and avg_disc_perc <= 100 then '90-100'
+	 else 'other' 
+end as discount_range
