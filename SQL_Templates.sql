@@ -145,3 +145,5 @@ case when avg_disc_perc >= 0 and avg_disc_perc < 10 then '0-9'
 	 when avg_disc_perc >= 90 and avg_disc_perc <= 100 then '90-100'
 	 else 'other' 
 end as discount_range
+
+
